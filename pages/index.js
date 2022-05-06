@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 import styled from "styled-components";
 import Header from '../components/Header.jsx';
 import SocialMediaFooter from '../components/SocialMediaFooter';
@@ -26,6 +27,7 @@ const MenuTitle = styled.h1`
     margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 6px;
+    cursor: pointer;
 
     MenuTitle:hover {
         color: black;
@@ -64,11 +66,11 @@ export default function Home() {
     <div className="pageWrapper">
       <Header></Header>
       <MenuContainer>
-        <a href="/"><MenuTitle style={{color:"black"}}>Home</MenuTitle></a>
-        <a href="/About"><MenuTitle>About</MenuTitle></a>
-        <a href="/Mint"><MenuTitle>Mint</MenuTitle></a>
-        <a href="/Team"><MenuTitle>Team</MenuTitle></a>
-        <a href="/Roadmap"><MenuTitle>Roadmap</MenuTitle></a>
+        <Link href="/"><MenuTitle style={{color:"black"}}>Home</MenuTitle></Link>
+        <Link href="/About"><MenuTitle>About</MenuTitle></Link>
+        <Link href="/Mint"><MenuTitle>Mint</MenuTitle></Link>
+        <Link href="/Team"><MenuTitle>Team</MenuTitle></Link>
+        <Link href="/Roadmap"><MenuTitle>Roadmap</MenuTitle></Link>
       </MenuContainer>
       <NftGallery>
         <NftImage src="/waggle1.png"></NftImage>

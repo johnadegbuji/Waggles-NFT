@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styled from "styled-components";
 import Header from '../components/Header.jsx';
 import SocialMediaFooter from '../components/SocialMediaFooter';
@@ -19,13 +20,15 @@ const MenuContainer = styled.div`
 
 const MenuTitle = styled.h1`
     width: 100px;
-    height: 40px;
+    height: 45px;
     font-family: 'Jomolhari', serif;
     font-size: 32px;
     color: #ABABAB;
     margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 6px;
+    cursor: pointer;
+
 
     MenuTitle:hover {
         color: black;
@@ -59,11 +62,11 @@ export default function About() {
 
       <Header></Header>
       <MenuContainer>
-        <a href="/"><MenuTitle>Home</MenuTitle></a>
-        <a href="/About"><MenuTitle style={{color:"black"}}>About</MenuTitle></a>
-        <a href="/Mint"><MenuTitle>Mint</MenuTitle></a>
-        <a href="/Team"><MenuTitle>Team</MenuTitle></a>
-        <a href="/Roadmap"><MenuTitle>Roadmap</MenuTitle></a>
+        <Link href="/"><MenuTitle>Home</MenuTitle></Link>
+        <Link href="/About"><MenuTitle style={{color:"black"}}>About</MenuTitle></Link>
+        <Link href="/Mint"><MenuTitle>Mint</MenuTitle></Link>
+        <Link href="/Team"><MenuTitle>Team</MenuTitle></Link>
+        <Link href="/Roadmap"><MenuTitle>Roadmap</MenuTitle></Link>
       </MenuContainer>
       <VideoContainer>
       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Xa-BCo1fnK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

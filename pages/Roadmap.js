@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Header from '../components/Header.jsx';
+import Link from 'next/link'
 import SocialMediaFooter from '../components/SocialMediaFooter';
 
 
@@ -24,6 +25,8 @@ const MenuTitle = styled.h1`
     margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 6px;
+    cursor: pointer;
+
 
     MenuTitle:hover {
         color: black;
@@ -38,11 +41,11 @@ export default function Roadmap() {
       <>
         <Header></Header>
         <MenuContainer>
-        <a href="/"><MenuTitle>Home</MenuTitle></a>
-        <a href="/About"><MenuTitle>About</MenuTitle></a>
-        <a href="/Mint"><MenuTitle>Mint</MenuTitle></a>
-        <a href="/Team"><MenuTitle>Team</MenuTitle></a>
-        <a href="/Roadmap"><MenuTitle style={{color:"black"}}>Roadmap</MenuTitle></a>
+        <Link href="/"><MenuTitle>Home</MenuTitle></Link>
+        <Link href="/About"><MenuTitle>About</MenuTitle></Link>
+        <Link href="/Mint"><MenuTitle>Mint</MenuTitle></Link>
+        <Link href="/Team"><MenuTitle>Team</MenuTitle></Link>
+        <Link href="/Roadmap"><MenuTitle style={{color:"black"}}>Roadmap</MenuTitle></Link>
         </MenuContainer>
         <SocialMediaFooter></SocialMediaFooter>
       </>
