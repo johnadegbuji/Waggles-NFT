@@ -100,7 +100,7 @@ export default function Team() {
 
             <TeamImage></TeamImage>
             <TeamName>DEVELOPER</TeamName>
-            <Description>Developer John Adegbuji also owner of "OpenSpaces" NFT Agency. He has been developing websites, applications, and contracts in the Web 2 and Web 3 spaces for 6+ years. 
+            <Description>Developer TOX also owner of OpenSpaces NFT Agency. He has been developing websites, applications, and contracts in the Web 2 and Web 3 spaces for 6+ years. 
              </Description>
 
           </InnerTeamContainer>
