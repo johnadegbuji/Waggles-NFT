@@ -22,7 +22,7 @@ const MenuTitle = styled.h1`
     width: 100px;
     height: 45px;
     font-family: 'Jomolhari', serif;
-    font-size: 32px;
+    font-size: 28px;
     color: #ABABAB;
     margin-bottom: 5px;
     text-transform: uppercase;

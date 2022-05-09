@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
 
 html,
 body {
@@ -25,4 +26,16 @@ a {
 
 .link {
   cursor: pointer;
+}
+
+.left {
+  width: 50%;
+  height: auto;
+  float: left;
+}
+
+.right{
+  width: 50%;
+  height: auto;
+  float: left;
 }
