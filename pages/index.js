@@ -5,6 +5,7 @@ import Link from 'next/link'
 import styled from "styled-components";
 import Header from '../components/Header.jsx';
 import SocialMediaFooter from '../components/SocialMediaFooter';
+import { useMediaQuery } from 'react-responsive'
 
 
 const MenuContainer = styled.div`
@@ -12,7 +13,7 @@ const MenuContainer = styled.div`
     height: auto;
     display: block;
     position: fixed;
-    bottom: 28.5%;
+    bottom: 16.5%;
     left: 4%;
     z-index: 1;
 
@@ -56,8 +57,8 @@ const NftGallery = styled.div`
 
 `
 const NftImage = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height: 175px;
   margin-top: 3%;
 
 `

@@ -10,10 +10,9 @@ const MenuContainer = styled.div`
     height: auto;
     display: block;
     position: fixed;
-    bottom: 28.5%;
+    bottom: 16.5%;
     left: 4%;
     z-index: 1;
-
 `
 
 const MenuTitle = styled.h1`
@@ -51,7 +50,7 @@ const RoadmapDescription = styled.p`
     font-size: 12px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 14%;
+    margin-top: 9%;
 
 `
 const Logo = styled.img`
@@ -93,6 +92,8 @@ export default function Roadmap() {
           Waggles.. and you.”
           <br></br><br></br>
           - Matt Willey
+          
+          <br></br><br></br>
           The Roadmap for anything and everything that is a part of The Good of
           the Hive is the same. Continue to change paradigms and raise
           consciousness around the idea that we are all more connected to each

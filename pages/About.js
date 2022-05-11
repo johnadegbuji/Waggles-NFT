@@ -12,7 +12,7 @@ const MenuContainer = styled.div`
     height: auto;
     display: block;
     position: fixed;
-    bottom: 28.5%;
+    bottom: 16.5%;
     left: 4%;
     z-index: 1;
 
@@ -41,7 +41,7 @@ const VideoContainer = styled.div`
     height: 425px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4%;
+    margin-top: 4.5%;
 
 
 `

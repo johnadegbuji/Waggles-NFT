@@ -13,10 +13,9 @@ const MenuContainer = styled.div`
     height: auto;
     display: block;
     position: fixed;
-    bottom: 28.5%;
+    bottom: 16.5%;
     left: 4%;
     z-index: 1;
-
 `
 
 const MenuTitle = styled.h1`
@@ -60,7 +59,7 @@ const HeadingTitle = styled.h1`
     font-family: 'Poppins';
     font-weight: 600;
     letter-spacing: 3px;
-
+    margin-bottom: -20px;
 `
 
 const SubText = styled.h4`
@@ -122,9 +121,9 @@ const Logo = styled.img`
 
 `
 const NftImage = styled.img`
-  width: 175px;
-  height: 175px;
-  margin-top: 3%;
+  width: 135px;
+  height: 135px;
+  margin-top: 0%;
   margin-left: auto;
   margin-right: auto;
 
@@ -159,7 +158,7 @@ export default function Mint() {
       <Container>
         <NftImage src="/waggle394.png"></NftImage>
         <HeadingTitle>MINT A WAGGLE</HeadingTitle>
-        <SubText style={{textAlign: "center"}}>Each Waggle NFT will be minted on the Ethereum blockchain.</SubText>
+        <SubText style={{textAlign: "center", marginTop:"35px"}}>Each Waggle NFT will be minted on the Ethereum blockchain.</SubText>
         <MintContainer>
             <div className="left">
                 <HeadingTitle>1000</HeadingTitle>
