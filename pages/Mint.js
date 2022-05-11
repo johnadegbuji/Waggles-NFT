@@ -13,7 +13,7 @@ const MenuContainer = styled.div`
     height: auto;
     display: block;
     position: fixed;
-    bottom: 8%;
+    bottom: 28.5%;
     left: 4%;
     z-index: 1;
 
@@ -22,14 +22,14 @@ const MenuContainer = styled.div`
 const MenuTitle = styled.h1`
     width: 100px;
     height: 45px;
-    font-family: 'Jomolhari', serif;
+    font-family: 'Poppins', serif;
+    font-weight: 500;
     font-size: 28px;
     color: #ABABAB;
     margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 6px;
     cursor: pointer;
-
 
     MenuTitle:hover {
         color: black;
@@ -42,7 +42,10 @@ const Container = styled.div`
     height: 30%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 `
 
@@ -51,53 +54,55 @@ const MintContainer = styled.div`
 
 `
 const HeadingTitle = styled.h1`
-    font-size: 29px;
+    font-size: 32px;
     width: 100%;
     text-align: center;
-    font-family: 'Jomolhari', serif;
+    font-family: 'Poppins';
+    font-weight: 600;
     letter-spacing: 3px;
 
 `
 
 const SubText = styled.h4`
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
-    font-family: 'Jomolhari', serif;
-
+    font-family: 'Poppins', serif;
+    font-weight: 400;
 
 `
 const MintButton = styled.button`
     width: 150px;
     height: 45px;
     border-radius: 5px;
-    border: white;
+    border-style: none;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 21px;
     color: #F3E462;
     background-color: black;
     letter-spacing: 2px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins';
+    font-weight: 400;   
     cursor: pointer;
 `
 const ConnectButton = styled.button`
-    font-family: 'Josefin Sans', sans-serif;   
+    font-family: 'Poppins';
+    font-weight: 400;   
     width: 150px;
     height: 45px;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 18px;
-    font-size: 16px;
+    font-size: 21px;
     background-color: #F3E462;
     letter-spacing: 2px;
     cursor: pointer;
-
 `
 
 const DisconnectButton = styled.button`
-    font-family: 'Josefin Sans', sans-serif;   
+    font-family: 'Poppins', sans-serif;   
     width: 150px;
     height: 45px;
     border-radius: 5px;
@@ -110,8 +115,20 @@ const DisconnectButton = styled.button`
     cursor: pointer;
 
 `
+const Logo = styled.img`
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
 
+`
+const NftImage = styled.img`
+  width: 175px;
+  height: 175px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
 
+`
 
 export default function Mint() {
     
@@ -132,6 +149,7 @@ export default function Mint() {
       <>
       <Header></Header>
       <MenuContainer>
+      <Logo src="/logo.png"></Logo>
       <Link href="/"><MenuTitle>Home</MenuTitle></Link>
       <Link href="/About"><MenuTitle >About</MenuTitle></Link>
       <Link href="/Mint"><MenuTitle style={{color:"black"}}>Mint</MenuTitle></Link>
@@ -139,6 +157,7 @@ export default function Mint() {
       <Link href="/Roadmap"><MenuTitle>Roadmap</MenuTitle></Link>
       </MenuContainer> 
       <Container>
+        <NftImage src="/waggle394.png"></NftImage>
         <HeadingTitle>MINT A WAGGLE</HeadingTitle>
         <SubText style={{textAlign: "center"}}>Each Waggle NFT will be minted on the Ethereum blockchain.</SubText>
         <MintContainer>

@@ -12,7 +12,7 @@ const MenuContainer = styled.div`
     height: auto;
     display: block;
     position: fixed;
-    bottom: 8%;
+    bottom: 28.5%;
     left: 4%;
     z-index: 1;
 
@@ -21,7 +21,8 @@ const MenuContainer = styled.div`
 const MenuTitle = styled.h1`
     width: 100px;
     height: 45px;
-    font-family: 'Jomolhari', serif;
+    font-family: 'Poppins', serif;
+    font-weight: 500;
     font-size: 28px;
     color: #ABABAB;
     margin-bottom: 5px;
@@ -37,9 +38,9 @@ const MenuTitle = styled.h1`
 
 const NftGallery = styled.div`
 
-    width: 40%;
-    height: 40vh;
-    margin-top: 15%;
+    width: 50%;
+    height: 425px;
+    margin-top: 4%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 8%;
@@ -55,36 +56,57 @@ const NftGallery = styled.div`
 
 `
 const NftImage = styled.img`
-  width: 125px;
-  height: 125px;
+  width: 200px;
+  height: 200px;
   margin-top: 3%;
 
 `
+const Logo = styled.img`
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+
+`
+
+const Title = styled.h1`
+    font-family: 'Poppins';
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 30px;
+    `
+const Subtitle = styled.h1`
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+`
+
 
 export default function Home() {
   return (
     <div className="pageWrapper">
-      <Header></Header>
       <MenuContainer>
+        <Logo src="/logo.png"></Logo>
         <Link href="/"><MenuTitle style={{color:"black"}}>Home</MenuTitle></Link>
         <Link href="/About"><MenuTitle>About</MenuTitle></Link>
         <Link href="/Mint"><MenuTitle>Mint</MenuTitle></Link>
         <Link href="/Team"><MenuTitle>Team</MenuTitle></Link>
         <Link href="/Roadmap"><MenuTitle>Roadmap</MenuTitle></Link>
       </MenuContainer>
+      <Title>The Waggles</Title>
+      <Subtitle>by The Good of the Hive</Subtitle>
       <NftGallery>
-        <NftImage src="/waggle1.png"></NftImage>
         <NftImage src="/waggle3.png"></NftImage>
-        <NftImage src="/waggle4.png"></NftImage>
-        <NftImage src="/waggle2.png"></NftImage>
-        <NftImage src="/waggle6.png"></NftImage>
-        <NftImage src="/waggle8.png"></NftImage>
-        <NftImage src="/waggle9.png"></NftImage>
-        <NftImage src="/waggle11.png"></NftImage>
-        <NftImage src="/waggle12.png"></NftImage>
-        <NftImage src="/waggle13.png"></NftImage>
-        <NftImage src="/waggle8.png"></NftImage>
-        <NftImage src="/waggle8.png"></NftImage>
+        <NftImage src="/waggle54.png"></NftImage>
+        <NftImage src="/waggle109.png"></NftImage>
+        <NftImage src="/waggle129.png"></NftImage>
+        <NftImage src="/waggle254.png"></NftImage>
+        <NftImage src="/waggle671.png"></NftImage>        
       </NftGallery>
       <SocialMediaFooter></SocialMediaFooter>
     </div>

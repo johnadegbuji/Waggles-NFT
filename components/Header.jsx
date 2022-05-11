@@ -22,9 +22,9 @@ const Logo = styled.img`
 const Header = () => {
     return(
         <HeaderContainer>
-            <Logo src="/logo.png"></Logo>
         </HeaderContainer>
     )
 }
 
 export default Header;
+

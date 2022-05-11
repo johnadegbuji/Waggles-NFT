@@ -10,7 +10,7 @@ const MenuContainer = styled.div`
     height: auto;
     display: block;
     position: fixed;
-    bottom: 8%;
+    bottom: 28.5%;
     left: 4%;
     z-index: 1;
 
@@ -19,7 +19,8 @@ const MenuContainer = styled.div`
 const MenuTitle = styled.h1`
     width: 100px;
     height: 45px;
-    font-family: 'Jomolhari', serif;
+    font-family: 'Poppins', serif;
+    font-weight: 500;
     font-size: 28px;
     color: #ABABAB;
     margin-bottom: 5px;
@@ -27,12 +28,9 @@ const MenuTitle = styled.h1`
     letter-spacing: 6px;
     cursor: pointer;
 
-
     MenuTitle:hover {
         color: black;
     }
-
-    
 
 `
 const RoadmapTitle = styled.h1`
@@ -49,11 +47,17 @@ const RoadmapTitle = styled.h1`
 const RoadmapDescription = styled.p`
     width: 50%;
     height: auto;
-    font-family: 'Jomolhari', serif;
-    font-size: 18px;
+    font-family: 'Poppins';
+    font-size: 12px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 7%;
+    margin-top: 14%;
+
+`
+const Logo = styled.img`
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
 
 `
 
@@ -62,6 +66,7 @@ export default function Roadmap() {
       <>
         <Header></Header>
         <MenuContainer>
+        <Logo src="/logo.png"></Logo>
         <Link href="/"><MenuTitle>Home</MenuTitle></Link>
         <Link href="/About"><MenuTitle>About</MenuTitle></Link>
         <Link href="/Mint"><MenuTitle>Mint</MenuTitle></Link>
@@ -70,12 +75,7 @@ export default function Roadmap() {
         </MenuContainer>
 
         <RoadmapDescription>
-          The Roadmap for anything and everything that is a part of The Good of
-          the Hive is the same. Continue to change paradigms and raise
-          consciousness around the idea that we are all more connected to each
-          other and the planet than we realize. We are all one hive.
-          <br></br><br></br>
-          “My intention has always been to build The Good of the Hive to be of
+        “My intention has always been to build The Good of the Hive to be of
           more and more service in different ways over time. As this hive of bees
           expands, so does the potential for reaching more people.
           <br></br><br></br>
@@ -93,6 +93,12 @@ export default function Roadmap() {
           Waggles.. and you.”
           <br></br><br></br>
           - Matt Willey
+          The Roadmap for anything and everything that is a part of The Good of
+          the Hive is the same. Continue to change paradigms and raise
+          consciousness around the idea that we are all more connected to each
+          other and the planet than we realize. We are all one hive.
+          <br></br><br></br>
+          
         </RoadmapDescription>
         <SocialMediaFooter></SocialMediaFooter>
       </>

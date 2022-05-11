@@ -10,7 +10,7 @@ const MenuContainer = styled.div`
     height: auto;
     display: block;
     position: fixed;
-    bottom: 8%;
+    bottom: 28.5%;
     left: 4%;
     z-index: 1;
 
@@ -19,7 +19,8 @@ const MenuContainer = styled.div`
 const MenuTitle = styled.h1`
     width: 100px;
     height: 45px;
-    font-family: 'Jomolhari', serif;
+    font-family: 'Poppins', serif;
+    font-weight: 500;
     font-size: 28px;
     color: #ABABAB;
     margin-bottom: 5px;
@@ -27,12 +28,9 @@ const MenuTitle = styled.h1`
     letter-spacing: 6px;
     cursor: pointer;
 
-
     MenuTitle:hover {
         color: black;
     }
-
-    
 
 `
 const TeamImage = styled.img`
@@ -44,14 +42,16 @@ const TeamImage = styled.img`
 
 `
 const TeamName = styled.h4`
-  font-family: 'Jomolhari', serif;
+  font-family: 'Poppins';
   font-size: 16px;
-  margin-top: -15px;
+  font-weight: 600;
+  margin-top: 0px;
 `
 
 const Description = styled.h4`
   width: 300px;
-  font-family: 'Jomolhari', serif;
+  font-family: 'Poppins';
+  font-weight: 300;
   font-size: 12px;
   margin-top: -25px;
   padding: 20px;
@@ -62,7 +62,7 @@ const Description = styled.h4`
 `
 
 const TeamContainer = styled.div`
-    width: 50%;
+    width: 80%;
     height: 250px;
     margin-top: 5%;
     margin-left: auto;
@@ -79,11 +79,19 @@ const InnerTeamContainer = styled.div`
 
     `
 
+    const Logo = styled.img`
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+
+`
+
 export default function Team() {
     return (
       <>
         <Header></Header>
         <MenuContainer>
+        <Logo src="/logo.png"></Logo>
         <Link href="/"><MenuTitle>Home</MenuTitle></Link>
         <Link href="/About"><MenuTitle>About</MenuTitle></Link>
         <Link href="/Mint"><MenuTitle>Mint</MenuTitle></Link>
@@ -103,32 +111,20 @@ export default function Team() {
             <Description>Developer TOX also owner of OpenSpaces NFT Agency. He has been developing websites, applications, and contracts in the Web 2 and Web 3 spaces for 6+ years. 
              </Description>
 
+            <TeamImage src="/waggle6.png"></TeamImage>
+            <TeamName>COMMUNITY</TeamName>
+            <Description>
+              Each place that participates in The Good of the Hive becomes a part of this
+              growing hive of 50,000. It was very intentional to invite the Web3/crypto
+              community into The Good of the Hive. The people are what give this project life.
+              It is about the potential for change that is within every person at every age and in
+              every corner of the world. The uncharted territory of Web3 seemed a perfect
+              place to have the bees fly in and see what is there.
+            </Description>
+
           </InnerTeamContainer>
         </div>
-        <div className="right">
-        <InnerTeamContainer>
-          <TeamImage src="/waggle3.png"></TeamImage>
-          <TeamName>MARKETING</TeamName>
-          <Description>Matt Macomber (aka Maeko) is...
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </Description>
-
-
-          <TeamImage src="/waggle6.png"></TeamImage>
-          <TeamName>COMMUNITY</TeamName>
-          <Description>
-            Each place that participates in The Good of the Hive becomes a part of
-            this growing hive of 50,000. It was very intentional to invite the
-            Web3/crypto community into The Good of the Hive. The people are
-            what give this project life. The Good of the Hive is a celebration of the
-            power in people connecting. It is about the potential for change that is
-            within every person at every age and in every corner of the world. The
-            uncharted territory of Web3 seemed a perfect place to have the bees
-            fly in and see what is there.
-          </Description>
-
-        </InnerTeamContainer>
-        </div>
+        
         </TeamContainer>
       <SocialMediaFooter></SocialMediaFooter>
       </>
