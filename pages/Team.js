@@ -2,36 +2,9 @@ import styled from "styled-components";
 import Header from '../components/Header.jsx';
 import Link from 'next/link'
 import SocialMediaFooter from '../components/SocialMediaFooter';
+import Navigation from '../components/Navigation'
 
 
-
-const MenuContainer = styled.div`
-    width: 30%;
-    height: auto;
-    display: block;
-    position: fixed;
-    bottom: 16.5%;
-    left: 4%;
-    z-index: 1;
-`
-
-const MenuTitle = styled.h1`
-    width: 100px;
-    height: 45px;
-    font-family: 'Poppins', serif;
-    font-weight: 500;
-    font-size: 28px;
-    color: #ABABAB;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    cursor: pointer;
-
-    MenuTitle:hover {
-        color: black;
-    }
-
-`
 const TeamImage = styled.img`
     width: 200px;
     height: 200px;
@@ -58,9 +31,6 @@ const Description = styled.h4`
   margin-top: -25px;
   padding: 20px;
 
-
-
-
 `
 
 const TeamContainer = styled.div`
@@ -70,6 +40,10 @@ const TeamContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
 
+    @media only screen and (min-Width: 768px) and (max-Width: 991px) {
+      width: 95%;
+    }
+
 `
 const InnerTeamContainer = styled.div`
     width: 100%;
@@ -78,6 +52,16 @@ const InnerTeamContainer = styled.div`
     flex-direction: row;
     align-items: flex-start;
     align-content: center;
+
+    @media only screen and (min-Width: 768px) and (max-Width: 991px) {
+      width: 95%;
+    }
+
+    @media only screen and (max-Width: 767px){
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+    }
 
     `
 const TeamMemberContainer = styled.div`
@@ -89,7 +73,10 @@ const TeamMemberContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    
+    @media only screen and (max-Width: 767px){
+      width: 100%;
+    }
 `
 
     const Logo = styled.img`
@@ -102,30 +89,16 @@ const TeamMemberContainer = styled.div`
 export default function Team() {
     return (
       <>
-        <Header></Header>
-        <MenuContainer>
-        <Logo src="/logo.png"></Logo>
-        <Link href="/"><MenuTitle>Home</MenuTitle></Link>
-        <Link href="/About"><MenuTitle>About</MenuTitle></Link>
-        <Link href="/Mint"><MenuTitle>Mint</MenuTitle></Link>
-        <Link href="/Team"><MenuTitle style={{color:"black"}}>Team</MenuTitle></Link>
-        <Link href="/Roadmap"><MenuTitle>Roadmap</MenuTitle></Link>
-      </MenuContainer>
-      
+      <Header></Header>
+      <Navigation></Navigation>
       <TeamContainer>
           <InnerTeamContainer>
             <TeamMemberContainer>
-              <TeamImage src="/waggle1.png"></TeamImage>
+              <TeamImage src="/waggle8.png"></TeamImage>
               <TeamName>FOUNDER/ARTIST</TeamName>
               <Description>Artist Matt Willey received a BFA from the School of the Museum of Fine Arts, Boston and Tufts University in 1993. He has been painting murals for nearly 30 years. He founded The Good of the Hive in 2015 and has been painting pollinators ever since.</Description>
             </TeamMemberContainer>
            
-            <TeamMemberContainer>
-              <TeamImage src="/waggle2.png"></TeamImage>
-              <TeamName>DEVELOPER</TeamName>
-              <Description>Developer TOX also owner of OpenSpaces NFT Agency. He has been developing websites, applications, and contracts in the Web 2 and Web 3 spaces for 6+ years. 
-              </Description>
-            </TeamMemberContainer>
 
             <TeamMemberContainer>
               <TeamImage src="/waggle6.png"></TeamImage>
@@ -137,6 +110,13 @@ export default function Team() {
                 It is about the potential for change that is within every person at every age and in
                 every corner of the world. The uncharted territory of Web3 seemed a perfect
                 place to have the bees fly in and see what is there.
+              </Description>
+            </TeamMemberContainer>
+
+            <TeamMemberContainer>
+              <TeamImage src="/waggle2.png"></TeamImage>
+              <TeamName>DEVELOPER</TeamName>
+              <Description>Developer TOX also owner of OpenSpaces NFT Agency. He has been developing websites, applications, and contracts in the Web 2 and Web 3 spaces for 6+ years. 
               </Description>
             </TeamMemberContainer>
             

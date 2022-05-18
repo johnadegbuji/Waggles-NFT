@@ -1,11 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import styled from "styled-components";
 import Header from '../components/Header.jsx';
 import SocialMediaFooter from '../components/SocialMediaFooter';
-
-
+import Navigation from '../components/Navigation.jsx';
 
 const MenuContainer = styled.div`
     width: 30%;
@@ -43,7 +39,15 @@ const VideoContainer = styled.div`
     margin-right: auto;
     margin-top: 4.5%;
 
+    @media only screen and (min-Width: 768px) and (max-Width: 991px) {
+      width: 90%;
+      height: 425px;
+    }
 
+    @media only screen and (max-Width: 767px){
+      width: 90%;
+      height: 325px;
+    }
 `
 const AboutText = styled.p`
     width: 50%;
@@ -55,6 +59,17 @@ const AboutText = styled.p`
     font-size 12px;
     line-height: 19px;
     letter-spacing: 0.1em; 
+    
+    @media only screen and (min-Width: 768px) and (max-Width: 991px) {
+      width: 90%;
+      font-size 10px;
+    }
+
+    @media only screen and (max-Width: 767px){
+      width: 90%;
+      font-size 10px;
+
+    }
 `
 const Logo = styled.img`
     margin-top: 30px;
@@ -69,14 +84,7 @@ export default function About() {
       <div className="pageWrapper">
 
       <Header></Header>
-      <MenuContainer>
-        <Logo src="/logo.png"></Logo>
-        <Link href="/"><MenuTitle>Home</MenuTitle></Link>
-        <Link href="/About"><MenuTitle style={{color:"black"}}>About</MenuTitle></Link>
-        <Link href="/Mint"><MenuTitle>Mint</MenuTitle></Link>
-        <Link href="/Team"><MenuTitle>Team</MenuTitle></Link>
-        <Link href="/Roadmap"><MenuTitle>Roadmap</MenuTitle></Link>
-      </MenuContainer>
+      <Navigation></Navigation>
       <VideoContainer>
       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Xa-BCo1fnK8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </VideoContainer>

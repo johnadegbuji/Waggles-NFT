@@ -5,7 +5,7 @@ import styled from "styled-components";
 const SocialContainer = styled.div`
     width: 35%;
     height: 50px;
-    margin-top: 3%;
+    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
     display: flex;

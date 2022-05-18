@@ -2,46 +2,7 @@ import styled from "styled-components";
 import Header from '../components/Header.jsx';
 import Link from 'next/link'
 import SocialMediaFooter from '../components/SocialMediaFooter';
-import SimpleAccordion from "../components/Accordian.jsx";
-
-
-const MenuContainer = styled.div`
-    width: 30%;
-    height: auto;
-    display: block;
-    position: fixed;
-    bottom: 16.5%;
-    left: 4%;
-    z-index: 1;
-`
-
-const MenuTitle = styled.h1`
-    width: 100px;
-    height: 45px;
-    font-family: 'Poppins', serif;
-    font-weight: 500;
-    font-size: 28px;
-    color: #ABABAB;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    cursor: pointer;
-
-    MenuTitle:hover {
-        color: black;
-    }
-
-`
-const RoadmapTitle = styled.h1`
-    width: 70%;
-    height: auto;
-    font-family: 'Jomolhari', serif;
-    font-size: 42px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-
-`
+import Navigation from "../components/Navigation.jsx";
 
 const RoadmapDescription = styled.p`
     width: 50%;
@@ -52,26 +13,16 @@ const RoadmapDescription = styled.p`
     margin-right: auto;
     margin-top: 9%;
 
-`
-const Logo = styled.img`
-    margin-top: 30px;
-    width: 100px;
-    height: 100px;
+    @media only screen and (max-Width: 767px){
+    width: 95%;
+    }
 
 `
-
 export default function Roadmap() {
     return (
       <>
         <Header></Header>
-        <MenuContainer>
-        <Logo src="/logo.png"></Logo>
-        <Link href="/"><MenuTitle>Home</MenuTitle></Link>
-        <Link href="/About"><MenuTitle>About</MenuTitle></Link>
-        <Link href="/Mint"><MenuTitle>Mint</MenuTitle></Link>
-        <Link href="/Team"><MenuTitle>Team</MenuTitle></Link>
-        <Link href="/Roadmap"><MenuTitle style={{color:"black"}}>Roadmap</MenuTitle></Link>
-        </MenuContainer>
+        <Navigation></Navigation>
 
         <RoadmapDescription>
         “My intention has always been to build The Good of the Hive to be of

@@ -1,77 +1,68 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import {useState} from 'react'
 import styled from "styled-components";
-import Header from '../components/Header.jsx';
 import SocialMediaFooter from '../components/SocialMediaFooter';
-import { useMediaQuery } from 'react-responsive'
-
-
-const MenuContainer = styled.div`
-    width: 30%;
-    height: auto;
-    display: block;
-    position: fixed;
-    bottom: 16.5%;
-    left: 4%;
-    z-index: 1;
-
-`
-
-const MenuTitle = styled.h1`
-    width: 100px;
-    height: 45px;
-    font-family: 'Poppins', serif;
-    font-weight: 500;
-    font-size: 28px;
-    color: #ABABAB;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    cursor: pointer;
-
-    MenuTitle:hover {
-        color: black;
-    }
-
-`
+import Navigation from '../components/Navigation';
 
 const NftGallery = styled.div`
-
-    width: 50%;
+    width: 500px;
     height: 425px;
-    margin-top: 4%;
+    margin-top: 4.5%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 8%;
     display: flex;
     left: 0;
     right: 0;
-    bottom: 25%;
+    bottom: 0%;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
     align-items: center;
+    
+    @media only screen and (min-Width: 1024px){
+      width: 575px;
+    
+    }
+
+    @media only screen and (min-Width: 1439px){
+      width: 700px;
+    }
+
+    @media only screen and (min-Width: 768px) and (max-Width: 991px) {
+      width: 65%;
+      margin-top: -5%;
+      bottom: 0%;
+
+    }
+
+    @media only screen and (max-Width: 767px){
+      width: 80%;
+    }
+
 
 `
+
 const NftImage = styled.img`
-  width: 175px;
-  height: 175px;
-  margin-top: 3%;
+  width: 180px;
+  height: auto;
+  margin-top: 2.5%;
+  
+  @media only screen and (min-Width: 768px) and (max-Width: 991px) {
+    width: 135px;
+    height: 135px;
+  }
 
-`
-const Logo = styled.img`
-    margin-top: 30px;
+  @media only screen and (max-Width: 767px){
     width: 100px;
     height: 100px;
-
+  }
 `
 
 const Title = styled.h1`
     font-family: 'Poppins';
     font-weight: 600;
+    margin-top: 6%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -87,18 +78,10 @@ const Subtitle = styled.h1`
 
 `
 
-
 export default function Home() {
   return (
     <div className="pageWrapper">
-      <MenuContainer>
-        <Logo src="/logo.png"></Logo>
-        <Link href="/"><MenuTitle style={{color:"black"}}>Home</MenuTitle></Link>
-        <Link href="/About"><MenuTitle>About</MenuTitle></Link>
-        <Link href="/Mint"><MenuTitle>Mint</MenuTitle></Link>
-        <Link href="/Team"><MenuTitle>Team</MenuTitle></Link>
-        <Link href="/Roadmap"><MenuTitle>Roadmap</MenuTitle></Link>
-      </MenuContainer>
+      <Navigation top="-6%"></Navigation>
       <Title>The Waggles</Title>
       <Subtitle>by The Good of the Hive</Subtitle>
       <NftGallery>
@@ -111,5 +94,7 @@ export default function Home() {
       </NftGallery>
       <SocialMediaFooter></SocialMediaFooter>
     </div>
-    )
+
+  )
+
 }
