@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import styled from "styled-components";
+import styles from '../styles/Home.module.css'
 import Header from '../components/Header.jsx';
-import Link from 'next/link'
 import SocialMediaFooter from '../components/SocialMediaFooter';
-import {ethers}  from "ethers";
+import web3 from "../utils/web3";
 import WagglesAbi from "../utils/WagglesAbi.json";
-import { useMediaQuery } from 'react-responsive'
 import Navigation from '../components/Navigation.jsx';
 
 
@@ -121,41 +120,34 @@ const ConnectButton = styled.button`
     }
 `
 
-const NftImage = styled.img`
-  width: 135px;
-  height: 135px;
-  margin-top: 0%;
-  margin-left: auto;
-  margin-right: auto;
 
-`
 
 
 export default function Mint() {
 
+    const [chainId, setChainId] = useState(null);
+
     useEffect(() => {
-    
-    getAllAccounts();
-    getNftPrice();
-    }, [])
+        getAllAccounts();
+        getNftPrice();
+        getRemainder();
+        getNetworkId();
+    }, [chainId])
     
    
     const [isConnected, setIsConnected] = useState(false);
     const [account, setAccount] = useState();
     const [price, setPrice] = useState();
-   
-   
-    const contractAddress = '0x14d44D677EcEC3246d5b8e8ac6b543C4Da5B0152';
-    const url = "https://rinkeby.infura.io/v3/06241ee1b6684b288ad53a56c7086150";
-    const provider = new ethers.providers.JsonRpcProvider(url);   
-    const signer = provider.getSigner(account);
-    const wagglesContract = new ethers.Contract(contractAddress, WagglesAbi.abi, signer);
-   
+    const [remaining, setRemaining] = useState();
+    const [displayPrice, setDisplayPrice] = useState();
 
+    const contractAddress = "0x680b146c1619e2e4019ce615fb79c850829b9c43";
+    const instance = new web3.eth.Contract(WagglesAbi.abi, contractAddress);
+    const contractChainId = 4;
+    
     const activateMetamask = async () => {
         if (window.ethereum){
-            const provider = new ethers.providers.Web3Provider(window.ethereum)
-            await provider.send("eth_requestAccounts", []);
+            ethereum.request({ method: 'eth_requestAccounts' });
             setIsConnected(true);
         } else if (isConnected){
             alert("You are already connected :)");
@@ -165,41 +157,69 @@ export default function Mint() {
           }
      }
 
+     const getNetworkId = async () => {
+        const currentChainId = await web3.eth.net.getId()
+        console.log(currentChainId);
+        setChainId(currentChainId);
+
+        if (chainId !== contractChainId){
+            await window.ethereum.request({
+                method: 'wallet_switchEthereumChain',
+                params: [{ chainId: web3.utils.toHex(contractChainId) }]
+            });    
+        } 
+            
+
+      }
+
     const getAllAccounts = async () => {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         const account = accounts[0];
-        console.log(account);
         setAccount(account);
     }
 
     const getNftPrice = async () => {
-        const price = await wagglesContract.price();
-        ethers.utils.parseEther((price).toString());
-        console.log(price);
+        const price =  await instance.methods.price().call();
+        const displayPrice = web3.utils.fromWei(price, 'ether');
         setPrice(price);
+        setDisplayPrice(displayPrice);
     }
-    
+
+    const getRemainder = async () => {
+        const totalSupply = await instance.methods.totalSupply().call();
+        const remainder = 1000 - totalSupply;
+        setRemaining(remainder);
+    }
 
     const mintWaggle = async () =>  {
-        await wagglesContract.publicMint(1),{
-            value: ethers.utils.parseEther((price).toString()), 
-            gasLimit: 5000000,}};
+        if (chainId == contractChainId){
+        await instance.methods.publicMint(1).send({from: account, value: price});
+        } 
+        else {
+        await window.ethereum.request({
+            method: 'wallet_switchEthereumChain',
+            params: contractChainId
+        });
+
+        await instance.methods.publicMint(1).send({from: account, value: price});
+        }
+    }
     
     return (
       <>
       <Header></Header>
       <Navigation></Navigation>
       <Container>
-        <NftImage src="/waggle394.png"></NftImage>
+        <img className={styles.NftImage} src="/waggle394.png"></img>
         <HeadingTitle>MINT A WAGGLE</HeadingTitle>
         <SubText style={{textAlign: "center", marginTop:"35px"}}>Each Waggle NFT will be minted on the Ethereum blockchain.</SubText>
         <MintContainer>
             <div className="left">
-                <HeadingTitle>1000</HeadingTitle>
+                <HeadingTitle>{remaining}</HeadingTitle>
                 <SubText>(REMAINING)</SubText>
             </div>
             <div className="right">
-                <HeadingTitle>.5 ETH</HeadingTitle>
+                <HeadingTitle>{displayPrice}</HeadingTitle>
                 <SubText>(PRICE)</SubText>
             </div>
         </MintContainer>

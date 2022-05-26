@@ -1,0 +1,8 @@
+{
+    "name": "Waggles by Good of The Hive",
+    "description": "1000 unique Waggles by artist Matt Willey are a rare collection of bees offered as a part of his global art project The Good of the Hive.",
+    "image": "ipfs://QmeAAx2c2WFghMk9UaHe6PF9ikQudjKgPEGz5dXcvMRhH6/1.png",
+    "external_link": "https://waggles.vercel.app ",
+    "seller_fee_basis_points": 400,
+    "fee_recipient": "0x1f697F6f79f87D6118882B54892c7Cdf628E8440"
+  }

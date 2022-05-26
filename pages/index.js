@@ -3,10 +3,12 @@ import styled from "styled-components";
 import SocialMediaFooter from '../components/SocialMediaFooter';
 import Navigation from '../components/Navigation';
 
+
+
 const NftGallery = styled.div`
     width: 500px;
     height: 425px;
-    margin-top: 4.5%;
+    margin-top: 3.5%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 8%;
@@ -78,23 +80,26 @@ const Subtitle = styled.h1`
 
 `
 
-export default function Home() {
-  return (
-    <div className="pageWrapper">
-      <Navigation top="-6%"></Navigation>
-      <Title>The Waggles</Title>
-      <Subtitle>by The Good of the Hive</Subtitle>
-      <NftGallery>
-        <NftImage src="/waggle3.png"></NftImage>
-        <NftImage src="/waggle54.png"></NftImage>
-        <NftImage src="/waggle109.png"></NftImage>
-        <NftImage src="/waggle129.png"></NftImage>
-        <NftImage src="/waggle254.png"></NftImage>
-        <NftImage src="/waggle671.png"></NftImage>        
-      </NftGallery>
-      <SocialMediaFooter></SocialMediaFooter>
-    </div>
 
+export default function Home() {
+
+  return (
+    
+    <div className="pageWrapper">
+    <Navigation top="-6%"></Navigation>
+    <Title>The Waggles</Title>
+    <Subtitle>by The Good of the Hive</Subtitle>
+    <NftGallery>
+      <NftImage src="/waggle3.png"></NftImage>
+      <NftImage src="/waggle54.png"></NftImage>
+      <NftImage src="/waggle109.png"></NftImage>
+      <NftImage src="/waggle129.png"></NftImage>
+      <NftImage src="/waggle254.png"></NftImage>
+      <NftImage src="/waggle671.png"></NftImage>        
+    </NftGallery>
+    <SocialMediaFooter></SocialMediaFooter>
+    </div>
+    
   )
 
 }

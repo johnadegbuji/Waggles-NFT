@@ -101,7 +101,7 @@ export default function About() {
         The Waggles bring the count to over 10,000.
         <br></br><br></br>
 
-          <i>“The name Waggles is based on a behavior of the honeybee called the “waggle
+          <i>“<span style={{fontSize:"14px"}}><i>The name Waggles</i></span> is based on a behavior of the honeybee called the “waggle
           dance.” It’s a tool the bees use to communicate directional navigation to other
           members of the hive.” -Matt Willey</i>
         <br></br><br></br>

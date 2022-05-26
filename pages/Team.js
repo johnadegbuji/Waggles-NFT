@@ -94,14 +94,14 @@ export default function Team() {
       <TeamContainer>
           <InnerTeamContainer>
             <TeamMemberContainer>
-              <TeamImage src="/waggle8.png"></TeamImage>
+              <TeamImage src="/matt.png"></TeamImage>
               <TeamName>FOUNDER/ARTIST</TeamName>
               <Description>Artist Matt Willey received a BFA from the School of the Museum of Fine Arts, Boston and Tufts University in 1993. He has been painting murals for nearly 30 years. He founded The Good of the Hive in 2015 and has been painting pollinators ever since.</Description>
             </TeamMemberContainer>
            
 
             <TeamMemberContainer>
-              <TeamImage src="/waggle6.png"></TeamImage>
+              <TeamImage src="/Community.png"></TeamImage>
               <TeamName>COMMUNITY</TeamName>
               <Description>
                 Each place that participates in The Good of the Hive becomes a part of this
@@ -114,9 +114,9 @@ export default function Team() {
             </TeamMemberContainer>
 
             <TeamMemberContainer>
-              <TeamImage src="/waggle2.png"></TeamImage>
+              <TeamImage src="/tox.png"></TeamImage>
               <TeamName>DEVELOPER</TeamName>
-              <Description>Developer TOX also owner of OpenSpaces NFT Agency. He has been developing websites, applications, and contracts in the Web 2 and Web 3 spaces for 6+ years. 
+              <Description>Developer TOX owner of <b><u><a href="https://openspaces.design">OpenSpaces NFT Agency</a></u></b> in Los Angeles has been developing websites, applications, and smart contracts in the Web2/Web3 spaces for 6+ years. 
               </Description>
             </TeamMemberContainer>
             

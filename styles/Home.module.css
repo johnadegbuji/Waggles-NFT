@@ -9,41 +9,28 @@
 
 }
 
-@media only screen and (min-Width: 1439px){
-  .menuContainer {
-  bottom: 20.5%;
-  left: 4%;    
-  }
+.MenuTitle {
+    width: 100px;
+    height: 40px;
+    font-family: 'Poppins', serif;
+    font-weight: 500;
+    font-size: 21px;
+    color: #ABABAB;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    cursor: pointer;
 }
+  .MenuTitle:hover {
+      color: black;
+  }
 
-@media only screen and (min-Width: 768px) and (max-Width: 991px) {
-  .menuContainer {
-  width: 25%;
-  height: 100%;
-  padding-left: 20px;
-  display: block;
-  position: fixed;
-  top: 0%;
-  left: 2%;
-  right: auto;
-  z-index: 1;
-  background-color: white;
-  opacity: .9;
-  }
-}
-
-@media only screen and (max-Width: 767px) {
-  .menuContainer {
-  height: 100%;
-  display: block;
-  position: fixed;
-  top: 0%;
-  left: 2%;
-  z-index: 1;
-  background-color: white;
-  opacity: .9;
-  }
-}
+  
+ .Logo {
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+ }
 
 .container {
   padding: 0 2rem;
@@ -153,6 +140,101 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.MenuToggle{
+  display: none;
+}
+
+.NftImage{
+  width: 135px;
+  height: 135px;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-Width: 1439px){
+  .menuContainer {
+  bottom: 20.5%;
+  left: 4%;    
+  }
+}
+
+@media only screen and (min-Width: 768px) and (max-Width: 991px) {
+  .menuContainer {
+  width: 25%;
+  height: 100%;
+  padding-left: 20px;
+  display: block;
+  position: fixed;
+  top: 0%;
+  left: 2%;
+  right: auto;
+  z-index: 1;
+  background-color: white;
+  opacity: .9;
+  }
+.MenuToggle {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  display: block;
+  top: 5%;
+  right: 4%;
+  left: auto;
+  z-index: 1;
+}
+
+.MenuTitle{
+  width: 90%;
+      height: 45px;
+      font-weight: 500;
+      font-size: 18px;
+      text-align: left;
+}
+
+.Logo {
+  width: 75px;
+      height: 75px;
+      display: block;
+      margin-left: 0px;
+      margin-right: auto;
+}
+}
+
+@media only screen and (max-Width: 767px) {
+  .menuContainer {
+  height: 100%;
+  display: block;
+  position: fixed;
+  top: 0%;
+  left: 2%;
+  z-index: 1;
+  background-color: white;
+  opacity: .9;
+  }
+.MenuToggle{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  display: block;
+  top: 2%;
+  right: 4%;
+  left: auto;
+  z-index: 1;
+}
+.MenuTitle{
+  width: 90%;
+      height: 25px;
+      font-weight: 500;
+      font-size: 14px;
+}
+
+.Logo {
+  width: 50px;
+  height: 50px;
+}
 }
 
 @media (max-width: 600px) {

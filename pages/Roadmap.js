@@ -48,7 +48,7 @@ export default function Roadmap() {
           The Roadmap for anything and everything that is a part of The Good of
           the Hive is the same. Continue to change paradigms and raise
           consciousness around the idea that we are all more connected to each
-          other and the planet than we realize. We are all one hive.
+          other and the planet than we realize. <span style={{fontSize:"14px"}}><i>We are all one hive.</i></span>
           <br></br><br></br>
           
         </RoadmapDescription>
