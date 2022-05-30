@@ -4,6 +4,15 @@ import Link from 'next/link'
 import SocialMediaFooter from '../components/SocialMediaFooter';
 import Navigation from "../components/Navigation.jsx";
 
+const RoadmapTitle = styled.h1`
+font-family: 'Poppins';
+font-size: 18px;
+width: 50%;
+height: auto;
+text-align: center;
+
+`
+
 const RoadmapDescription = styled.p`
     width: 50%;
     height: auto;
@@ -13,8 +22,27 @@ const RoadmapDescription = styled.p`
     margin-right: auto;
     margin-top: 9%;
 
+    @media only screen and (min-Width: 1440px){
+      width: 50%;
+      height: auto;
+      font-family: 'Poppins';
+      font-size: 12px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 13.5%;
+      line-height: 1.8;
+    }
+    @media only screen and (min-Width: 1440px){
+      width: 50%;
+      height: auto;
+      font-family: 'Poppins';
+      font-size: 12px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 9%;
+    }
     @media only screen and (max-Width: 767px){
-    width: 95%;
+      width: 95%;
     }
 
 `
@@ -25,6 +53,7 @@ export default function Roadmap() {
         <Navigation></Navigation>
 
         <RoadmapDescription>
+        <h1 style={{fontFamily: "Poppins", textAlign:"center"}}>We are all one hive.</h1>
         “My intention has always been to build The Good of the Hive to be of
           more and more service in different ways over time. As this hive of bees
           expands, so does the potential for reaching more people.
@@ -48,7 +77,7 @@ export default function Roadmap() {
           The Roadmap for anything and everything that is a part of The Good of
           the Hive is the same. Continue to change paradigms and raise
           consciousness around the idea that we are all more connected to each
-          other and the planet than we realize. <span style={{fontSize:"14px"}}><i>We are all one hive.</i></span>
+          other and the planet than we realize.<i> We are all one hive.</i>
           <br></br><br></br>
           
         </RoadmapDescription>

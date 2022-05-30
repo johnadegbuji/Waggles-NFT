@@ -24,6 +24,7 @@ const NftGallery = styled.div`
     
     @media only screen and (min-Width: 1024px){
       width: 575px;
+      margin-top: 4%;
     
     }
 
@@ -49,6 +50,12 @@ const NftImage = styled.img`
   width: 180px;
   height: auto;
   margin-top: 2.5%;
+
+  @media only screen and (max-Width: 1024px){
+  width: 150px;
+  height: auto;
+  margin-top: 8%;
+  }
   
   @media only screen and (min-Width: 768px) and (max-Width: 991px) {
     width: 135px;
@@ -64,7 +71,7 @@ const NftImage = styled.img`
 const Title = styled.h1`
     font-family: 'Poppins';
     font-weight: 600;
-    margin-top: 6%;
+    margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -88,7 +95,8 @@ export default function Home() {
     <div className="pageWrapper">
     <Navigation top="-6%"></Navigation>
     <Title>The Waggles</Title>
-    <Subtitle>by The Good of the Hive</Subtitle>
+    <Subtitle>by Matt Willey</Subtitle>
+    <Subtitle>for the Good Of The Hive®</Subtitle>
     <NftGallery>
       <NftImage src="/waggle3.png"></NftImage>
       <NftImage src="/waggle54.png"></NftImage>

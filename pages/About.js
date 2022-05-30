@@ -37,7 +37,7 @@ const VideoContainer = styled.div`
     height: 425px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4.5%;
+    margin-top: 8%;
 
     @media only screen and (min-Width: 768px) and (max-Width: 991px) {
       width: 90%;
@@ -101,9 +101,10 @@ export default function About() {
         The Waggles bring the count to over 10,000.
         <br></br><br></br>
 
-          <i>“<span style={{fontSize:"14px"}}><i>The name Waggles</i></span> is based on a behavior of the honeybee called the “waggle
-          dance.” It’s a tool the bees use to communicate directional navigation to other
-          members of the hive.” -Matt Willey</i>
+        <b><i>“<span style={{fontSize:"16px"}}>The name Waggles is based on a behavior of the honeybee called the “waggle
+        dance.” It’s a tool the bees use to communicate directional navigation to other
+        members of the hive.”</span><br></br><br></br> -Matt Willey</i></b>
+
         <br></br><br></br>
         A personal experience with a honeybee in 2008 sparked a paradigm
         shift for Willey. He realized that human and planetary health are

@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import {useMediaQuery} from 'react-responsive'
+import AOS from "aos";
+import FadeIn from 'react-fade-in';
 
 
 let menu;
@@ -29,22 +31,25 @@ const toggleMenu = () => {
 
 if (menuOpen){
   menu = 
-  
-  <div className={styles.menuContainer}>
-      <img src="/logo.png"></img>
+  <div  className={styles.menuContainer}>
+      <h1 className={styles.exitButton} onClick={() => toggleMenu()}>X</h1>
+      <img className={styles.Logo} src="/logo.png"></img>
+      <FadeIn delay="100" childClassName="MenuTitle">
       <Link href="/"><h1 className={styles.MenuTitle}>Home</h1></Link>
       <Link href="/About"><h1 className={styles.MenuTitle}>About</h1></Link>
       <Link href="/Mint"><h1 className={styles.MenuTitle}>Mint</h1></Link>
       <Link href="/Team"><h1 className={styles.MenuTitle}>Team</h1></Link>
       <Link href="/Roadmap"><h1 className={styles.MenuTitle}>Roadmap</h1></Link>
+      </FadeIn>
+
   </div>
 
 } else if (!menuOpen && isDesktopOrLaptop ) {
   
   menu = 
   
-  <div className={styles.menuContainer}>
-      <img src="/logo.png"></img>
+  <div data-aos="fade-down" className={styles.menuContainer}>
+      <img className={styles.Logo} src="/logo.png"></img>
       <Link href="/"><h1 className={styles.MenuTitle}>Home</h1></Link>
       <Link href="/About"><h1 className={styles.MenuTitle}>About</h1></Link>
       <Link href="/Mint"><h1 className={styles.MenuTitle}>Mint</h1></Link>
@@ -57,6 +62,7 @@ if (menuOpen){
   menu = null;
 
 }
+AOS.refresh();
 
 return (
     <>

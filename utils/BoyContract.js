@@ -3,7 +3,7 @@ import { Contract } from '@ethersproject/contracts'
  
 const contractAddress = 
 //Rinkeby
-'0x14d44D677EcEC3246d5b8e8ac6b543C4Da5B0152'
+'0xbb055F2db23864a16f922b564D22d89Dd76737d1'
 
 export const getContract = (account, provider) => {
   

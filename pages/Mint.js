@@ -141,7 +141,7 @@ export default function Mint() {
     const [remaining, setRemaining] = useState();
     const [displayPrice, setDisplayPrice] = useState();
 
-    const contractAddress = "0x680b146c1619e2e4019ce615fb79c850829b9c43";
+    const contractAddress = "0xbb055F2db23864a16f922b564D22d89Dd76737d1";
     const instance = new web3.eth.Contract(WagglesAbi.abi, contractAddress);
     const contractChainId = 4;
     
@@ -187,7 +187,7 @@ export default function Mint() {
 
     const getRemainder = async () => {
         const totalSupply = await instance.methods.totalSupply().call();
-        const remainder = 1000 - totalSupply;
+        const remainder = 1001 - totalSupply;
         setRemaining(remainder);
     }
 

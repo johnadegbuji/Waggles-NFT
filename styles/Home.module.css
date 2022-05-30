@@ -161,6 +161,32 @@
   }
 }
 
+@media only screen and (min-Width: 1024px) and (max-Width: 1439px){
+  .menuContainer {
+      width: 30%;
+      height: auto;
+      display: block;
+      position: fixed;
+      bottom: 24%;
+      left: 4%;
+      z-index: 1;
+  
+  }
+
+  .MenuTitle {
+    width: 100px;
+    height: 40px;
+    font-family: 'Poppins', serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ABABAB;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    cursor: pointer;
+}
+}
+
 @media only screen and (min-Width: 768px) and (max-Width: 991px) {
   .menuContainer {
   width: 25%;
@@ -205,30 +231,50 @@
 
 @media only screen and (max-Width: 767px) {
   .menuContainer {
+  width: 100%;
   height: 100%;
-  display: block;
+  display: flex;
   position: fixed;
   top: 0%;
   left: 2%;
   z-index: 1;
   background-color: white;
   opacity: .9;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  transition-property: all;
   }
 .MenuToggle{
   width: 25px;
   height: 25px;
   position: absolute;
   display: block;
-  top: 2%;
+  top: 2.5%;
   right: 4%;
   left: auto;
   z-index: 1;
 }
+
+.exitButton{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  display: block;
+  top: 0%;
+  right: 4.75%;
+  left: auto;
+  z-index: 1;
+  font-size: 21px;
+}
+
 .MenuTitle{
-  width: 90%;
-      height: 25px;
-      font-weight: 500;
-      font-size: 14px;
+  width: 100%;
+  height: 25px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 25%;
 }
 
 .Logo {
