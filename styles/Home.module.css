@@ -154,9 +154,9 @@
   margin-right: auto;
 }
 
-@media only screen and (min-Width: 1439px){
+@media only screen and (min-Width: 1440px){
   .menuContainer {
-  bottom: 20.5%;
+  bottom: 22.5%;
   left: 4%;    
   }
 }
