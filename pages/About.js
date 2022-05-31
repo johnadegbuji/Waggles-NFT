@@ -51,11 +51,14 @@ const VideoContainer = styled.div`
     @media only screen and (min-Width: 768px) and (max-Width: 991px) {
       width: 90%;
       height: 425px;
+      margin-top: 20%;
+
     }
 
     @media only screen and (max-Width: 767px){
       width: 90%;
       height: 325px;
+      margin-top: 20%;
     }
 `
 const AboutText = styled.p`
@@ -90,10 +93,9 @@ const Logo = styled.img`
 
 export default function About() {
     return (
-      <div className="pageWrapper">
-
-      <Header></Header>
+      <>
       <Navigation></Navigation>
+      <div className="pageWrapper">
       <VideoContainer>
       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Xa-BCo1fnK8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </VideoContainer>
@@ -162,5 +164,6 @@ export default function About() {
       </AboutText>
       <SocialMediaFooter></SocialMediaFooter>
       </div>
+      </>
     )
   }

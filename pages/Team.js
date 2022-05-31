@@ -44,6 +44,7 @@ const TeamContainer = styled.div`
       width: 95%;
     }
 
+
 `
 const InnerTeamContainer = styled.div`
     width: 100%;
@@ -89,7 +90,6 @@ const TeamMemberContainer = styled.div`
 export default function Team() {
     return (
       <>
-      <Header></Header>
       <Navigation></Navigation>
       <TeamContainer>
           <InnerTeamContainer>

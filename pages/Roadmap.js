@@ -23,7 +23,6 @@ const RoadmapDescription = styled.p`
     margin-top: 12%;
     line-height: 1.6;
 
-
     @media only screen and (min-Width: 1440px){
       width: 50%;
       height: auto;
@@ -31,17 +30,7 @@ const RoadmapDescription = styled.p`
       font-size: 12px;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 13.5%;
-      line-height: 1.8;
-    }
-    @media only screen and (min-Width: 1440px){
-      width: 50%;
-      height: auto;
-      font-family: 'Poppins';
-      font-size: 12px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 9%;
+      margin-top: 6%;
     }
     @media only screen and (max-Width: 767px){
       width: 95%;
@@ -51,9 +40,7 @@ const RoadmapDescription = styled.p`
 export default function Roadmap() {
     return (
       <>
-        <Header></Header>
         <Navigation></Navigation>
-
         <RoadmapDescription>
         <h1 style={{fontFamily: "Poppins", textAlign:"center"}}>We are all one hive.</h1>
         “My intention has always been to build The Good of the Hive to be of

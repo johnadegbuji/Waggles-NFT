@@ -47,7 +47,8 @@ if (menuOpen){
 } else if (!menuOpen && isDesktopOrLaptop ) {
   
   menu = 
-  
+  <>
+  <img style={{marginLeft:"auto", marginRight:"auto", display:"block", width:"60px", height:"60px", position:"fixed", left:"2%", top:"0%"}} className={styles.Logo} src="/logo.png"></img>
   <div data-aos="fade-down" className={styles.menuContainer}>
       <Link href="/"><h1 className={styles.MenuTitle}>Home</h1></Link>
       <Link href="/About"><h1 className={styles.MenuTitle}>About</h1></Link>
@@ -55,6 +56,7 @@ if (menuOpen){
       <Link href="/Team"><h1 className={styles.MenuTitle}>Team</h1></Link>
       <Link href="/Roadmap"><h1 className={styles.MenuTitle}>Roadmap</h1></Link>
   </div>
+  </>
 
 } else if (!menuOpen){
   

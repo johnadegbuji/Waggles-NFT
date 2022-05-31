@@ -13,7 +13,7 @@ const Container = styled.div`
     height: 30%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0%;
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +24,7 @@ const Container = styled.div`
 
     @media only screen and (max-Width: 767px){
         width: 70%;
+        margin-top: 25%;
 
     }
 
@@ -207,7 +208,6 @@ export default function Mint() {
     
     return (
       <>
-      <Header></Header>
       <Navigation></Navigation>
       <Container>
         <img className={styles.NftImage} src="/waggle394.png"></img>
