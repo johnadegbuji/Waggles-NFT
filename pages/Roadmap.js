@@ -20,7 +20,7 @@ const RoadmapDescription = styled.p`
     font-size: 12px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 9%;
+    margin-top: 12%;
     line-height: 1.6;
 
 

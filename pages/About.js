@@ -34,10 +34,19 @@ const MenuTitle = styled.h1`
 
 const VideoContainer = styled.div`
     width: 50%;
-    height: 57%;
+    height: 45%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 8%;
+
+
+    @media only screen and (min-Width: 992px) and (min-Height: 899px)  {
+      height: 50%;
+    }
+
+    @media only screen and (min-Width: 992px) and (min-Height: 799px)  {
+      height: 45%;
+    }
 
     @media only screen and (min-Width: 768px) and (max-Width: 991px) {
       width: 90%;
