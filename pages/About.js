@@ -34,7 +34,7 @@ const MenuTitle = styled.h1`
 
 const VideoContainer = styled.div`
     width: 50%;
-    height: 425px;
+    height: 57%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 8%;
@@ -73,8 +73,8 @@ const AboutText = styled.p`
 `
 const Logo = styled.img`
     margin-top: 30px;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
 
 `
 
@@ -148,8 +148,8 @@ export default function About() {
         The Good of the Hive is a partner and collaborator with the  <span style={{color: "orange"}}><a href="https://wcpun.org/">World
         Council of Peoples for the United Nations (WCPUN)</a></span> in support of
         the UN’s 17 Sustainable Development Goals and was featured in the
-        special edition of WCPUN’s publication <span style={{color: "orange"}}><a href="https://wcpun.org/centerpoint-now-2/">CENTERPOINT NOW</a></span>
-        commemorating the 75th anniversary of the United Nations.
+        special edition of WCPUN’s publication <span style={{color: "orange"}}><a href="https://wcpun.org/centerpoint-now-2/">CENTERPOINT NOW </a></span>
+         commemorating the 75th anniversary of the United Nations.
       </AboutText>
       <SocialMediaFooter></SocialMediaFooter>
       </div>

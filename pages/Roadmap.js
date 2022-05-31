@@ -21,6 +21,8 @@ const RoadmapDescription = styled.p`
     margin-left: auto;
     margin-right: auto;
     margin-top: 9%;
+    line-height: 1.6;
+
 
     @media only screen and (min-Width: 1440px){
       width: 50%;

@@ -2,13 +2,14 @@ import {useState} from 'react'
 import styled from "styled-components";
 import SocialMediaFooter from '../components/SocialMediaFooter';
 import Navigation from '../components/Navigation';
+import styles from '../styles/Home.module.css'
 
 
 
 const NftGallery = styled.div`
     width: 500px;
     height: 425px;
-    margin-top: 3.5%;
+    margin-top: -1.5%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 8%;
@@ -24,12 +25,14 @@ const NftGallery = styled.div`
     
     @media only screen and (min-Width: 1024px){
       width: 575px;
-      margin-top: 4%;
+      margin-top: -.5%;
     
     }
 
     @media only screen and (min-Width: 1439px){
       width: 700px;
+      margin-top: -1.5%;
+
     }
 
     @media only screen and (min-Width: 768px) and (max-Width: 991px) {
@@ -52,7 +55,7 @@ const NftImage = styled.img`
   margin-top: 2.5%;
 
   @media only screen and (max-Width: 1024px){
-  width: 150px;
+  width: 165px;
   height: auto;
   margin-top: 8%;
   }
@@ -71,7 +74,7 @@ const NftImage = styled.img`
 const Title = styled.h1`
     font-family: 'Poppins';
     font-weight: 600;
-    margin-top: 3%;
+    margin-top: 1%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -94,9 +97,10 @@ export default function Home() {
     
     <div className="pageWrapper">
     <Navigation top="-6%"></Navigation>
+    <img style={{marginLeft:"auto", marginRight:"auto", display:"block", width:"70px", height:"70px"}} className={styles.Logo} src="/logo.png"></img>
     <Title>The Waggles</Title>
     <Subtitle>by Matt Willey</Subtitle>
-    <Subtitle>for the Good Of The Hive®</Subtitle>
+    <Subtitle>for The Good of the Hive®</Subtitle>
     <NftGallery>
       <NftImage src="/waggle3.png"></NftImage>
       <NftImage src="/waggle54.png"></NftImage>

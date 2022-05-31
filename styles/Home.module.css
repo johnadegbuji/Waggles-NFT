@@ -161,13 +161,13 @@
   }
 }
 
-@media only screen and (min-Width: 1024px) and (max-Width: 1439px){
+@media only screen and (min-Width: 992px) and (max-Width: 1439px){
   .menuContainer {
       width: 30%;
       height: auto;
       display: block;
       position: fixed;
-      bottom: 24%;
+      bottom: 19%;
       left: 4%;
       z-index: 1;
   

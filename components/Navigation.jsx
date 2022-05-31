@@ -49,7 +49,6 @@ if (menuOpen){
   menu = 
   
   <div data-aos="fade-down" className={styles.menuContainer}>
-      <img className={styles.Logo} src="/logo.png"></img>
       <Link href="/"><h1 className={styles.MenuTitle}>Home</h1></Link>
       <Link href="/About"><h1 className={styles.MenuTitle}>About</h1></Link>
       <Link href="/Mint"><h1 className={styles.MenuTitle}>Mint</h1></Link>
