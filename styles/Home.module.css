@@ -291,7 +291,7 @@
   top: 0%;
   left: 2%;
   z-index: 1;
-  background-color: white;
+  background-color: black;
   opacity: .9;
   flex-direction: column;
   align-content: center;
@@ -329,7 +329,7 @@
   font-size: 26px;
   text-align: center;
   margin-top: 25%;
-  color: #000000;
+  color: white;
 
 }
 
