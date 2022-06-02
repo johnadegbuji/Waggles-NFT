@@ -33,7 +33,7 @@ if (menuOpen){
   menu = 
   <div  className={styles.menuContainer}>
       <h1 className={styles.exitButton} onClick={() => toggleMenu()}>X</h1>
-      <img className={styles.Logo} src="/logo.png"></img>
+      <img className={styles.Logo} src="/CircleBee.png"></img>
       <FadeIn delay="100" childClassName="MenuTitle">
       <Link href="/"><h1 className={styles.MenuTitle}>Home</h1></Link>
       <Link href="/About"><h1 className={styles.MenuTitle}>About</h1></Link>
