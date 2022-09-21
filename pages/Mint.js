@@ -137,12 +137,13 @@ export default function Mint() {
     
    
     const [isConnected, setIsConnected] = useState(false);
+    const [connectText, setConnectText] = useState("Connect")
     const [account, setAccount] = useState();
     const [price, setPrice] = useState();
     const [remaining, setRemaining] = useState();
     const [displayPrice, setDisplayPrice] = useState();
 
-    const contractAddress = "0xbb055F2db23864a16f922b564D22d89Dd76737d1";
+    const contractAddress = "0x0D9b2f378fdb7C17206601e21f07d07E431C63d4";
     const instance = new web3.eth.Contract(WagglesAbi.abi, contractAddress);
     const contractChainId = 4;
     
@@ -150,12 +151,17 @@ export default function Mint() {
         if (window.ethereum){
             ethereum.request({ method: 'eth_requestAccounts' });
             setIsConnected(true);
+            setConnectText("Connected");
         } else if (isConnected){
             alert("You are already connected :)");
+            setConnectText("Connected");
+
           }
           else if(!window.ethereum) {
             alert("Please download the Metamask wallet extension");
-          }
+            setConnectText("Connect");
+
+        }
      }
 
      const getNetworkId = async () => {
@@ -224,7 +230,7 @@ export default function Mint() {
             </div>
         </MintContainer>
         <MintContainer style={{flexDirection:"column"}}>
-            <ConnectButton onClick={() => activateMetamask()}>CONNECT</ConnectButton>
+            <ConnectButton onClick={() => activateMetamask()}>{connectText}</ConnectButton>
             <MintButton onClick={() => mintWaggle()}>MINT</MintButton>
         </MintContainer>
       </Container> 
