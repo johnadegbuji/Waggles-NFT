@@ -143,9 +143,9 @@ export default function Mint() {
     const [remaining, setRemaining] = useState();
     const [displayPrice, setDisplayPrice] = useState();
 
-    const contractAddress = "0x0D9b2f378fdb7C17206601e21f07d07E431C63d4";
+    const contractAddress = "0x3c3e4675d3e19a449128c648970F1F559a1Ae376";
     const instance = new web3.eth.Contract(WagglesAbi.abi, contractAddress);
-    const contractChainId = 4;
+    const contractChainId = 5;
     
     const activateMetamask = async () => {
         if (window.ethereum){
