@@ -253,7 +253,7 @@ export default function Mint() {
     }
 
     const mintWaggle = async () =>  {
-        if (account !== undefined){
+        if (account !== undefined && saleActive){
             if (chainId == contractChainId){
                 await instance.methods.publicMint(1).send({from: account, value: price})
                 .on('transactionHash', function(hash){
@@ -286,7 +286,7 @@ export default function Mint() {
         } else if (account == undefined) {
             setMessage("Please connect a wallet before minting.")
 
-    } else if (!saleActive){
+        } else if (!saleActive){
         setMessage("The sale is not live yet")
     }
     }
