@@ -27,7 +27,7 @@ const Description = styled.h4`
   width: 85%;
   font-family: 'Poppins';
   font-weight: 300;
-  font-size: 10px;
+  font-size: 11px;
   margin-top: -25px;
   padding: 20px;
 
