@@ -125,7 +125,7 @@ const ConnectButton = styled.button`
 
 
 export default function Mint() {
-    const contractChainId = 5;
+    const contractChainId = 1;
     const [chainId, setChainId] = useState(null);
 
     
@@ -148,7 +148,7 @@ export default function Mint() {
     const [displayPrice, setDisplayPrice] = useState();
     const [message, setMessage] = useState("");
  
-    const contractAddress = "0x0bb241BD8DEdA137F6318F220F733496a034EF6c";
+    const contractAddress = "0x1510d6beDdA5B3f7cc144F5444C4d745176F21aB";
     const instance = new web3.eth.Contract(WagglesAbi.abi, contractAddress);
         
     const activateMetamask = async () => {
