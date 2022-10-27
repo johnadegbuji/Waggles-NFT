@@ -287,11 +287,11 @@ export default function Mint() {
         <MintContainer>
             <div className="left">
                 <HeadingTitle>{remaining}</HeadingTitle>
-                <SubText>(REMAINING)</SubText>
+                <SubText>REMAINING</SubText>
             </div>
             <div className="right">
                 <HeadingTitle>{displayPrice}</HeadingTitle>
-                <SubText>(PRICE - ETH)</SubText>
+                <SubText>PRICE(ETH)</SubText>
             </div>
         </MintContainer>
         <MintContainer style={{flexDirection:"column"}}>
