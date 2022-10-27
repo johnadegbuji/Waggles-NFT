@@ -125,59 +125,89 @@ const ConnectButton = styled.button`
 
 
 export default function Mint() {
-
+    const contractChainId = 5;
     const [chainId, setChainId] = useState(null);
 
+    
     useEffect(() => {
-        getAllAccounts();
+        // getAllAccounts();
+        isMetamaskInstalled();
+        getNetworkId();
         getNftPrice();
         getRemainder();
-        getNetworkId();
+        
     }, [chainId])
     
    
     const [isConnected, setIsConnected] = useState(false);
+    const [isMetaInstalled, setIsMetaInstalled] = useState(false);
     const [connectText, setConnectText] = useState("Connect")
     const [account, setAccount] = useState();
     const [price, setPrice] = useState();
     const [remaining, setRemaining] = useState();
     const [displayPrice, setDisplayPrice] = useState();
-
-    const contractAddress = "0x3c3e4675d3e19a449128c648970F1F559a1Ae376";
+    const [message, setMessage] = useState("");
+ 
+    const contractAddress = "0x0bb241BD8DEdA137F6318F220F733496a034EF6c";
     const instance = new web3.eth.Contract(WagglesAbi.abi, contractAddress);
-    const contractChainId = 5;
-    
+        
     const activateMetamask = async () => {
-        if (window.ethereum){
-            ethereum.request({ method: 'eth_requestAccounts' });
-            setIsConnected(true);
-            setConnectText("Connected");
-        } else if (isConnected){
-            alert("You are already connected :)");
-            setConnectText("Connected");
+        const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
+            .then (
+                console.log("connect attempt made"),
+                setIsConnected(true),
+                setConnectText("Connected"),
+            
+            )
+            .catch((err) => {
+                if (err.code === 4001) {
+                  console.log("User denied account connection"),
+                  setConnectText("Connect"),
+                  setMessage("Please connect to MetaMask.")
+                } else {
+                  console.error(err);
+                  setConnectText("Connect"),
+                  setMessage("Please connect to MetaMask.")
+                }
+              });
 
-          }
-          else if(!window.ethereum) {
-            alert("Please download the Metamask wallet extension");
-            setConnectText("Connect");
+        const account = accounts[0];
+        console.log("account connected:" + account);
+        setAccount(account);
+        setMessage(account);
+
+    }
+    const isMetamaskInstalled = async () => {
+        if (window.ethereum == undefined) {
+            setIsMetaInstalled(false);
+            setMessage("Please install Metamask first");
+        } 
+        else {
+            setIsMetaInstalled(true);
+            setMessage("Please connect a wallet");
 
         }
-     }
-
+    }
      const getNetworkId = async () => {
-        const currentChainId = await web3.eth.net.getId()
-        console.log(currentChainId);
+        let currentChainId = await web3.eth.net.getId()
         setChainId(currentChainId);
+        console.log("on load chain is:" + currentChainId);
 
-        if (chainId !== contractChainId){
-            await window.ethereum.request({
-                method: 'wallet_switchEthereumChain',
-                params: [{ chainId: web3.utils.toHex(contractChainId) }]
-            });    
-        } 
+        try {
+            if (chainId !== contractChainId){
+                await window.ethereum.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: [{ chainId: web3.utils.toHex(contractChainId) }]
+                });
+                let currentChainId = await web3.eth.net.getId()
+                setChainId(currentChainId);
+                }
             
+          } catch (error) {
 
+          }
       }
+
 
     const getAllAccounts = async () => {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -186,30 +216,63 @@ export default function Mint() {
     }
 
     const getNftPrice = async () => {
+
+        if (isMetaInstalled){
         const price =  await instance.methods.price().call();
         const displayPrice = web3.utils.fromWei(price, 'ether');
         setPrice(price);
         setDisplayPrice(displayPrice);
+        } else {
+            const price = "???";
+            setDisplayPrice(price);
+        }
     }
 
     const getRemainder = async () => {
+        if (isMetaInstalled){
         const totalSupply = await instance.methods.totalSupply().call();
-        const remainder = 1001 - totalSupply;
+        const remainder = 1000 - totalSupply;
         setRemaining(remainder);
+        } else {
+            const remainder = "???";
+            setRemaining(remainder);
+        }
     }
 
     const mintWaggle = async () =>  {
-        if (chainId == contractChainId){
-        await instance.methods.publicMint(1).send({from: account, value: price});
-        } 
-        else {
-        await window.ethereum.request({
-            method: 'wallet_switchEthereumChain',
-            params: contractChainId
-        });
+        if (account !== undefined){
+            if (chainId == contractChainId){
+                await instance.methods.publicMint(1).send({from: account, value: price})
+                .on('transactionHash', function(hash){
+                    setMessage("Transaction pending. Please wait...");
+                })
+                .on('receipt', function(receipt){
+                    setMessage("Thank you! View your Waggle on Opensea");
+                }) 
+                .on('error', function(receipt){
+                    setMessage("The transaction failed. Please try again");
+                })
 
-        await instance.methods.publicMint(1).send({from: account, value: price});
-        }
+            } else {
+                await window.ethereum.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: contractChainId
+                });
+                await instance.methods.publicMint(1).send({from: account, value: price}).on('transactionHash', function(hash){
+                    setMessage("Transaction pending. Please wait...");
+                })
+                .on('receipt', function(receipt){
+                    setMessage("Thank you! View your now Waggle on Opensea");
+                }) 
+                .on('error', function(receipt){
+                    setMessage("The transaction failed. Please try again");
+                });
+            }
+
+        } else if (account == undefined) {
+            setMessage("Please connect a wallet before minting.")
+
+    } 
     }
     
     return (
@@ -232,6 +295,7 @@ export default function Mint() {
         <MintContainer style={{flexDirection:"column"}}>
             <ConnectButton onClick={() => activateMetamask()}>{connectText}</ConnectButton>
             <MintButton onClick={() => mintWaggle()}>MINT</MintButton>
+            <SubText>{message}</SubText>
         </MintContainer>
       </Container> 
       <SocialMediaFooter></SocialMediaFooter>

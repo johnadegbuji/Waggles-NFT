@@ -2,19 +2,6 @@
 {
     "abi": [
         {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "newLimit",
-                    "type": "uint256"
-                }
-            ],
-            "name": "alterMintLimit",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
             "inputs": [],
             "stateMutability": "nonpayable",
             "type": "constructor"
@@ -468,25 +455,6 @@
             "type": "function"
         },
         {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "name": "cardPurchaseTracker",
-            "outputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
             "inputs": [],
             "name": "contractURI",
             "outputs": [
@@ -545,19 +513,6 @@
         {
             "inputs": [],
             "name": "maxSupply",
-            "outputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "mintLimit",
             "outputs": [
                 {
                     "internalType": "uint256",
