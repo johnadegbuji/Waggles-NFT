@@ -95,13 +95,14 @@ const MintButton = styled.button`
     }
 
     @media only screen and (max-Width: 767px){
-    
+        width: 75%;
+
     }
 `
 const ConnectButton = styled.button`
     font-family: 'Poppins';
     font-weight: 400;   
-    width: 150px;
+    width: 75%;
     height: 45px;
     border-radius: 5px;
     margin-left: auto;
@@ -117,7 +118,8 @@ const ConnectButton = styled.button`
     }
 
     @media only screen and (max-Width: 767px){
-    
+        width: 75%;
+
     }
 `
 
