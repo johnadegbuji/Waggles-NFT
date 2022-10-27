@@ -258,7 +258,7 @@
   width: 35px;
   height: 35px;
   position: absolute;
-  display: block;
+  display: none;
   top: 5%;
   right: 4%;
   left: auto;
@@ -276,7 +276,7 @@
 .Logo {
   width: 75px;
       height: 75px;
-      display: block;
+      display: none !important;
       margin-left: 0px;
       margin-right: auto;
 }

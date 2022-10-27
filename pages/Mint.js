@@ -102,7 +102,7 @@ const MintButton = styled.button`
 const ConnectButton = styled.button`
     font-family: 'Poppins';
     font-weight: 400;   
-    width: 75%;
+    width: 150px;
     height: 45px;
     border-radius: 5px;
     margin-left: auto;
@@ -137,6 +137,7 @@ export default function Mint() {
         getNetworkId();
         getNftPrice();
         getRemainder();
+        isSaleActive();
         
     }, [chainId])
     
@@ -149,6 +150,7 @@ export default function Mint() {
     const [remaining, setRemaining] = useState();
     const [displayPrice, setDisplayPrice] = useState();
     const [message, setMessage] = useState("");
+    const [saleActive, setSaleActive] = useState();
  
     const contractAddress = "0x1510d6beDdA5B3f7cc144F5444C4d745176F21aB";
     const instance = new web3.eth.Contract(WagglesAbi.abi, contractAddress);
@@ -241,6 +243,15 @@ export default function Mint() {
         }
     }
 
+    const isSaleActive = async () => {
+        if(isMetaInstalled){
+            const isSaleActive = await instance.methods.saleActive().call();
+            setSaleActive(isSaleActive);
+
+        }
+
+    }
+
     const mintWaggle = async () =>  {
         if (account !== undefined){
             if (chainId == contractChainId){
@@ -252,7 +263,8 @@ export default function Mint() {
                     setMessage("Thank you! View your Waggle on Opensea");
                 }) 
                 .on('error', function(receipt){
-                    setMessage("The transaction failed. Please try again");
+                    setMessage(receipt.message);
+
                 })
 
             } else {
@@ -267,14 +279,16 @@ export default function Mint() {
                     setMessage("Thank you! View your now Waggle on Opensea");
                 }) 
                 .on('error', function(receipt){
-                    setMessage("The transaction failed. Please try again");
+                    setMessage(receipt.message);
                 });
             }
 
         } else if (account == undefined) {
             setMessage("Please connect a wallet before minting.")
 
-    } 
+    } else if (!saleActive){
+        setMessage("The sale is not live yet")
+    }
     }
     
     return (

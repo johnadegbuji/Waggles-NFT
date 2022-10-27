@@ -17,6 +17,10 @@ const isDesktopOrLaptop = useMediaQuery({
   query: '(min-width: 1024px)'
 })
 
+const isTablet = useMediaQuery({
+  query: '(min-width: 767px)'
+})
+
 const toggleMenu = () => {
 
     if (menuOpen) {
@@ -44,7 +48,7 @@ if (menuOpen){
 
   </div>
 
-} else if (!menuOpen && isDesktopOrLaptop ) {
+} else if (!menuOpen && (isDesktopOrLaptop || isTablet) ) {
   
   menu = 
   <>
