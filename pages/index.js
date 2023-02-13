@@ -103,11 +103,11 @@ export default function Home() {
     
     <div className="pageWrapper">
     <Navigation top="-6%"></Navigation>
-    <Title>The Waggles</Title>
+    <Title>The Good of The Hive NFT Bees</Title>
     <Subtitle>by Matt Willey</Subtitle>
     <Subtitle>for The Good of the Hive®</Subtitle>
     <NftGallery>
-      <NftImage src="/waggle3.png"></NftImage>
+      <NftImage src="/waggle40.png"></NftImage>
       <NftImage src="/waggle54.png"></NftImage>
       <NftImage src="/waggle109.png"></NftImage>
       <NftImage src="/waggle129.png"></NftImage>

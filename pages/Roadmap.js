@@ -42,33 +42,38 @@ export default function Roadmap() {
       <>
         <Navigation></Navigation>
         <RoadmapDescription>
-        <h1 style={{fontFamily: "Poppins", textAlign:"center"}}>We are all one hive.</h1>
-        “My intention has always been to build The Good of the Hive to be of
-          more and more service in different ways over time. As this hive of bees
-          expands, so does the potential for reaching more people.
+        <h1 style={{fontFamily: "Poppins", textAlign:"center"}}>This is about more than just the bees.</h1>
+        Within this collection of NFT Bees there are 5 with visual messages that incorporate aspects of planetary
+        health beyond pollination. 
+        <ul>
+          <li>
+          A shark’s fin symbolizes the importance of oceans and apex predators.
+          </li>
+          <li>
+          Oil symbolizes the need to change our relationship to fossil fuels and petrochemicals.
+          </li>
+          <li>
+          A tree reminds thatdeforestation is quickly closing a door on biodiversity.
+          </li>
+          <li>
+          Honey drips remind us of the importance of food systems.
+          </li>
+          <li>
+          A simple Echinacea flower reminds us that the issues are not ‘over there’ in nature, they are all around us.
+          </li>
+        </ul>
+          These are not just symbols within this collection, they are a part of the Roadmap to where
+          The Good of the Hive is going with the art and the project. If you mint one of these 5 bees, you have just
+          won an original bee painting valued at <b>$1000 USD!</b>
           <br></br><br></br>
-          There are many places I would like to bring a mural that have, until
-          now, simply not been possible. As a part of the Roadmap of success for
-          the Waggle collection, I am offering at least two murals in parts of the
-          world that would otherwise not be able to participate because of
-          financial reasons. That equals 12- 16 weeks of time on my part in
-          addition to the costs of creating the piece in what will likely be a
-          relatively remote part of the world. In addition to signing the murals, I
-          will hand-paint one of the Waggles in the corner so everyone will know
-          that you helped make that mural happen. The locations will be chosen
-          from inquiries I have received or receive in the coming months. They will
-          be invited to participate at no cost to their community, courtesy of the
-          Waggles.. and you.”
+          Art is our most powerful tool for opening people up to change. The Good of the Hive begins with the
+          bees and will continue to support awareness and action in healing the issues that pollinators face. But
+          the road ahead is also about what the bees are showing us. The murals, the art, the films and these NFT
+          Bees carry a very simple and important message - bees, trees, people, soil, water, and air are all one
+          thing. When we wrap our head around this and align with actions that honor this connectedness,
+          healing becomes inevitable.
           <br></br><br></br>
           - Matt Willey
-          
-          <br></br><br></br>
-          The Roadmap for anything and everything that is a part of The Good of
-          the Hive is the same. Continue to change paradigms and raise
-          consciousness around the idea that we are all more connected to each
-          other and the planet than we realize.<i> We are all one hive.</i>
-          <br></br><br></br>
-          
         </RoadmapDescription>
         <SocialMediaFooter></SocialMediaFooter>
       </>

@@ -104,17 +104,16 @@ export default function Team() {
               <TeamImage src="/Community.png"></TeamImage>
               <TeamName>COMMUNITY</TeamName>
               <Description>
-                Each place that participates in The Good of the Hive becomes a part of this
-                growing hive of 50,000. It was very intentional to invite the Web3/crypto
-                community into The Good of the Hive. The people are what give this project life.
-                It is about the potential for change that is within every person at every age and in
-                every corner of the world. The uncharted territory of Web3 seemed a perfect
-                place to have the bees fly in and see what is there.
+              Each place that participates in The Good of the Hive with a mural or installation adds to this
+              growing hive of 50,000. The idea has always been to have this project grow and expand
+              globally, while creating a sense of community at the local level. People are what give this
+              project life. The potential for change that is within every person at every age and in every
+              corner of the world is what it is about. This now includes the Web3 community.
               </Description>
             </TeamMemberContainer>
 
             <TeamMemberContainer>
-              <TeamImage src="/tox.png"></TeamImage>
+              <TeamImage src="/John.jpeg"></TeamImage>
               <TeamName>DEVELOPER</TeamName>
               <Description>Developer TOX owner of <b><u><a href="https://openspaces.design">OpenSpaces NFT Agency</a></u></b> in Los Angeles has been developing websites, applications, and smart contracts in the Web2/Web3 spaces for 6+ years. 
               </Description>
