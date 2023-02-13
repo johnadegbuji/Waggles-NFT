@@ -152,7 +152,7 @@ export default function Mint() {
     const [message, setMessage] = useState("");
     const [saleActive, setSaleActive] = useState();
  
-    const contractAddress = "0x4ba90382E7acF0C99b7feC4e1745d0D54BDB87c7";
+    const contractAddress = "0xDA4d8632e6001Eb49d82bF532F407ABb43980CEA";
     const instance = new web3.eth.Contract(WagglesAbi.abi, contractAddress);
         
     const activateMetamask = async () => {
