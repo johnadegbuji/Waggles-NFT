@@ -107,7 +107,7 @@ export default function Home() {
     <Subtitle>by Matt Willey</Subtitle>
     <Subtitle>for The Good of the Hive®</Subtitle>
     <NftGallery>
-      <NftImage src="/Waggle54.png"></NftImage>
+      <NftImage src="/waggle54.png"></NftImage>
       <NftImage src="/waggle200.png"></NftImage>
       <NftImage src="/waggle109.png"></NftImage>
       <NftImage src="/waggle129.png"></NftImage>
