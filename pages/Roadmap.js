@@ -53,7 +53,7 @@ export default function Roadmap() {
           Oil symbolizes the need to change our relationship to fossil fuels and petrochemicals.
           </li>
           <li>
-          A tree reminds thatdeforestation is quickly closing a door on biodiversity.
+          A tree reminds that deforestation is quickly closing a door on biodiversity.
           </li>
           <li>
           Honey drips remind us of the importance of food systems.

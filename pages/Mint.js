@@ -296,8 +296,8 @@ export default function Mint() {
       <Navigation></Navigation>
       <Container>
         <img className={styles.NftImage} src="/waggle394.png"></img>
-        <HeadingTitle>MINT A WAGGLE</HeadingTitle>
-        <SubText style={{textAlign: "center", marginTop:"35px"}}>Each Waggle NFT will be minted on the Ethereum blockchain.</SubText>
+        <HeadingTitle>MINT A NFT BEE</HeadingTitle>
+        <SubText style={{textAlign: "center", marginTop:"35px"}}>Each NFT Bee will bee minted on the Ethereum blockchain.</SubText>
         <MintContainer>
             <div className="left">
                 <HeadingTitle>{remaining}</HeadingTitle>
