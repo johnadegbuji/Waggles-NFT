@@ -25,15 +25,22 @@ const SocialImage = styled.img`
     margin-right: 10px;
 
 `
+const SocialImageInverted = styled.img`
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    filter: invert(1);
+`
 
 
 const SocialMediaFooter = () => {
     return  (
         <>
             <SocialContainer>
-                <SocialImage src="/instagram.png"></SocialImage>
-                <SocialImage src="/twitter.png"></SocialImage>
-                <SocialImage src="/discord.png"></SocialImage>
+                <a href="https://instagram.com/thegoodofthehive"><SocialImage src="/instagram.png"></SocialImage></a>
+                <a href="https://twitter.com/goodofthehive"><SocialImage src="/twitter.png"></SocialImage></a>
+                <a href="https://www.facebook.com/thegoodofthehive"><SocialImageInverted src="/Facebook-White.png"></SocialImageInverted></a>
             </SocialContainer>
         </>
     )

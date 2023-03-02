@@ -227,7 +227,7 @@ export default function Mint() {
         setPrice(price);
         setDisplayPrice(displayPrice);
         } else {
-            const price = "???";
+            const price = ".5";
             setDisplayPrice(price);
         }
     }
